@@ -6,10 +6,12 @@
 
   </div>
 
+
+  <% if user_signed_in? %>
    <p><%= link_to 'delete', [comment.post, comment],
                    method: :delete,
                    class: "button",
                    date: { confirm: 'Are you sure?' } %>
                  </p>
-
+  <% end %>
 </div>
